@@ -5,6 +5,7 @@ const Home = () => {
     return (
         <View>
             <Text>Trabajando...</Text>
+            <Text>Holaaaa</Text>
         </View>
     )
 }
