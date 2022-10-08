@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, ScrollView} from 'react-native'
+import { StyleSheet, View, ScrollView, Text} from 'react-native'
 import StyledText from './StyledText.jsx' 
 import Constants from 'expo-constants'
 import theme from './stylesGlobals/theme.js'
@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
         backgroundColor: theme.appBar.primary,
         paddingTop: Constants.statusBarHeight + 10,
         flexDirection: 'row',
- 
     },
     scroll: {
         paddingBottom: 15,
@@ -24,30 +23,30 @@ const styles = StyleSheet.create({
     }
 })
 
-const AppBarTab = ({ children, to })=> {
-    let {pathname} = useLocation()
-    const active = pathname === to
+// const AppBarTab = ({ children, to })=> {
+//     let location = useLocation()
+//     const active = location.pathname === to
 
-    const textStyles = [
-        styles.text,
-        active && styles.active
-    ]
+//     const textStyles = [
+//         styles.text,
+//         active && styles.active
+//     ]
 
-    return (
-        <Link to={to}>
-            <StyledText fontWeight='bold' style={textStyles}>
-                {children}
-            </StyledText>
-        </Link>
-    )
-}
+//     return (
+//         <Link to={to}>
+//             <StyledText fontWeight='bold' style={textStyles}>
+//                 {children}
+//             </StyledText>
+//         </Link>
+//     )
+// }
 
 const AppBar = () => {
     return (
         <View style={styles.container}>
             <ScrollView horizontal style={styles.scroll}>
-            <AppBarTab to='/'>Home</AppBarTab>
-            <AppBarTab to='/menu'>Menu</AppBarTab>
+            <Text to='/'>Home</Text>
+            <Text to='/menu'>Menu</Text>
             </ScrollView>
         </View>
     )
