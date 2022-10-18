@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet } from "react-native";
 import Constants from 'expo-constants'
+import Login from './pages/Login';
 
 const styles = StyleSheet.create({
     container: {
@@ -10,8 +11,8 @@ const styles = StyleSheet.create({
 
 const Main = () => {
     return (
-        <View style={styles.container}>
-        <Text>Trabajando en el menu...</Text>
+      <View style={styles.container}>
+        <Login/>
         </View>
     )
 }
