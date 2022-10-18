@@ -23,8 +23,8 @@ export default function Carrousel() {
                 activeOpacity={1}>
                 <Image source={{ uri: item.url }} style={styles.image} />
                 <View style={styles.footer}>
-                    <Text style={styles.footerText}>{item.title}</Text>
-                    <Text style={styles.footerText}>{item.promo}</Text>
+                    <Text style={styles.footerTextLeft}>{item.title}</Text>
+                    <Text style={styles.footerTextRight}>{item.promo}</Text>
                 </View>
             </TouchableOpacity>
         )
@@ -79,22 +79,36 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#fff"
     },
-    footerText: {
+    footerTextLeft: {
         color: "#fff",
         fontSize: 18,
         fontWeight: "bold",
-        marginHorizontal: 20,
+        paddingLeft: 30,
         backgroundColor: "#E6213D",
-        width: 80,
+        width: 115,
         justifyContent: "center",
         textAlign: "center",
-        borderRadius: 50,
+        borderBottomRightRadius: 6,
+        borderTopRightRadius: 6,
+    },
+    footerTextRight: {
+        color: "#fff",
+        fontSize: 18,
+        fontWeight: "bold",
+        paddingRight: 30,
+        backgroundColor: "#E6213D",
+        width: 115,
+        justifyContent: "center",
+        textAlign: "center",
+        borderBottomLeftRadius: 6,
+        borderTopLeftRadius: 6,
+        
     },
     dotView: {
         flexDirection: "row",
         justifyContent: "center",
-        marginVertical: -20,
-        top: -10,
+        marginVertical: -5,
+        top: -25,
         alignItems: "center"
     },
     circle: {

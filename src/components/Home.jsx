@@ -11,9 +11,7 @@ const styles = StyleSheet.create({
 
 const Home = () => {
     return (
-      <View>
-        <View style={styles.container}>
-        </View>
+      <View style={styles.container}>
         <Carrousel />
       </View>
     )
